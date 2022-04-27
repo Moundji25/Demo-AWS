@@ -7,6 +7,10 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+app.get('/',(req,res) => {
+    res.send("hello guys")
+});
+
 app.get('/CoinList/:monnaie/', async (req, res) => {
   const monnaie = req.params.monnaie;
   console.log("DANS COIN LIST : ")
